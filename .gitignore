@@ -29,3 +29,8 @@ Tutorials/tutorial/tutorial/spiders/__init__.py
 Tutorials/tutorial/tutorial/spiders/quotes_spider.py
 Tutorials/tutorial/tutorial/spiders/__pycache__/__init__.cpython-312.pyc
 Tutorials/tutorial/tutorial/spiders/__pycache__/quotes_spider.cpython-312.pyc
+toscrape/toscrape/spiders/books.py
+toscrape/toscrape/spiders/__pycache__/books.cpython-312.pyc
+toscrape/toscrape/__pycache__/settings.cpython-312.pyc
+toscrape/bookdata.csv
+toscrape/toscrape/__pycache__/settings.cpython-312.pyc

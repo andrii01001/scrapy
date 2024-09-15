@@ -91,3 +91,6 @@ ROBOTSTXT_OBEY = True
 REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+
+# FEED_FORMAT = 'json'  # You can change to 'csv', 'xml', etc.
+# FEED_URI = 'output.json'
