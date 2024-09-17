@@ -17,7 +17,7 @@ NEWSPIDER_MODULE = "toscrape.spiders"
 #USER_AGENT = "toscrape (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -50,9 +50,10 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    "toscrape.middlewares.ToscrapeDownloaderMiddleware": 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+   "toscrape.middlewares.ToscrapeDownloaderMiddleware": 543,
+   "toscrape.middlewares.ScrapeOpsFakeUserAgentMiddleware": 400,
+}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
@@ -64,7 +65,7 @@ ROBOTSTXT_OBEY = True
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    "toscrape.pipelines.ToscrapePipeline": 300,
-   "toscrape.pipelines.SaveToMySQLPipeline": 400
+   #"toscrape.pipelines.SaveToMySQLPipeline": 400
    
 }
 
@@ -96,3 +97,8 @@ FEED_EXPORT_ENCODING = "utf-8"
 
 # FEED_FORMAT = 'json'  # You can change to 'csv', 'xml', etc.
 # FEED_URI = 'output.json'
+
+SCRAPEOPS_API_KEY = 'bbd1e6ae-0d74-43c0-95d4-8204e0cac62f'
+SCRAPEOPS_FAKE_USER_AGENT_ENDPOINT = 'https://headers.scrapeops.io/v1/browser-headers'
+SCRAPEOPS_FAKE_USER_AGENT_ENABLED = True
+SCRAPEOPS_NUM_RESULTS = 4
